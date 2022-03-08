@@ -12,6 +12,13 @@ import { getUser } from '../../utilities/users-service';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
+  const [food, setFood] = useState();
+
+  async function searchFood(query) {
+    const food = await foodAPI.searchFood('apple');
+    console.log(food)
+  }
+  searchFood();
 
   return (
     <main className="App">
