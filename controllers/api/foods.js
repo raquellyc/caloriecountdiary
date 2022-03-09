@@ -1,17 +1,21 @@
 const Foods = require('../../models/food');
-
+const request = require('request');
 module.exports = {
-
+    search
 }
 
-var query = '3lb carrots and a chicken sandwich';
-request.get({
-  url: 'https://api.calorieninjas.com/v1/nutrition?query='+query,
-  headers: {
-    'X-Api-Key':'/lMXkVFD0hiExj9jnNzkWQ==GLiYCMlq9LTjuKBh'
-  },
-}, function(error, response, body) {
-  if(error) return console.error('Request failed:', error);
-  else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
-  else console.log(body)
-})
+async function search(req, res) {
+    
+    request.get({
+      url: 'https://api.calorieninjas.com/v1/nutrition?query=' + req.body.query,
+      headers: {
+        'X-Api-Key':`${process.env.API_KEY}`
+      },
+    }, function(error, response, body) {
+      if(error) return console.error('Request failed:', error);
+      else if(response.statusCode != 200) return console.error('Error:', response.statusCode, body.toString('utf8'));
+      else res.json(body)
+
+    })
+}
+
