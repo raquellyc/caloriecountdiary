@@ -1,5 +1,8 @@
+import { useState } from "react";
 
-export default function WorkoutForm({newWorkout, setNewWorkout, addWorkout}) {
+
+export default function WorkoutForm({ addWorkout }) {
+  const [newWorkout, setNewWorkout] = useState({ name: "", duration: "", time: "" });
 
   function handleChangeState(evt) {
     const updatedNewWorkout = {
@@ -19,7 +22,6 @@ export default function WorkoutForm({newWorkout, setNewWorkout, addWorkout}) {
     });
   }
 
-
   return (
     <>
     <form className="NewWorkoutForm" onSubmit={handleAddWorkout}>
@@ -32,23 +34,21 @@ export default function WorkoutForm({newWorkout, setNewWorkout, addWorkout}) {
         required
         pattern=".{4,}"
       />
+      <label>Start Time: </label>
+      <input
+      type= "time" 
+      name="time" 
+      value={newWorkout.time} 
+      onChange={handleChangeState}
+      />
       <label>Duration: </label>
       <input
         name="duration"
         value={newWorkout.duration}
         onChange={handleChangeState}
         placeholder="Time in minutes"
-        required
-        pattern=".{4,}"
       />
-      <label>Start Time: </label>
-      <input
-      type= "time" 
-      name="duration" 
-      value={newWorkout.time} 
-      onChange={handleChangeState}>
-      </input>
-      <button type="submit">Add Workout</button>
+      <button type="submit" onClick={() => handleAddWorkout(newWorkout._id)}>Add Workout</button>
     </form>
 
     </>
