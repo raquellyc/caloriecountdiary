@@ -17,10 +17,6 @@ export default function CalorieForm({ handleQuery }) {
     <div>
       <div className="food-diary">
         <form onSubmit={handleSubmit} >
-          <label>Search Food: </label>
-          <input value={inputValue} type="text" name="search" onChange={evt => handleChange(evt)} ></input>
-          <button type="submit" >Search</button>
-
           <label>Meal: </label>
             <select>
                 <option>Breakfast</option>
@@ -28,8 +24,12 @@ export default function CalorieForm({ handleQuery }) {
                 <option>Dinner</option>
                 <option>Snack</option>
             </select>
-          <button type="submit">ADD</button>
+            <br/>
         </form>
+          <label>Search Food: </label>
+          <input value={inputValue} type="text" name="search" onChange={evt => handleChange(evt)} ></input>
+          <button type="submit" >Search</button>
+
       </div>
 
     </div>

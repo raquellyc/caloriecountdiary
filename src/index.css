@@ -1,13 +1,13 @@
 /* CSS Custom Properties */
 :root {
-  --white: #FFFFFF;
-  --tan-1: #FBF9F6;
-  --tan-2: #E7E2DD;
-  --tan-3: #E2D9D1;
-  --tan-4: #D3C1AE;
-  --orange: #F67F00;
-  --text-light: #968c84;
-  --text-dark: #615954;
+  --white: #ffffff;
+  --tan-1: #8da586;
+  --tan-2: #73916f;
+  --tan-3: #567448;
+  --tan-4: #98b190;
+  --orange: #f2c9eb;
+  --text-light: #0e0d0d;
+  --text-dark: #030303;
 }
 
 *, *:before, *:after {
@@ -30,6 +30,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
 
 #root {
   height: 100%;
