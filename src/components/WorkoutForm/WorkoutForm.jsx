@@ -1,8 +1,5 @@
-import { useState } from "react";
 
-export default function WorkoutForm() {
-  const [newWorkout, setNewWorkout] = useState({ name: "", time: "" });
-  const [addWorkout] = useState();
+export default function WorkoutForm({newWorkout, setNewWorkout, addWorkout}) {
 
   function handleChangeState(evt) {
     const updatedNewWorkout = {
@@ -22,7 +19,9 @@ export default function WorkoutForm() {
     });
   }
 
+
   return (
+    <>
     <form className="NewWorkoutForm" onSubmit={handleAddWorkout}>
       <label>Exercise: </label>
       <input
@@ -45,11 +44,13 @@ export default function WorkoutForm() {
       <label>Start Time: </label>
       <input
       type= "time" 
-      name="level" 
+      name="duration" 
       value={newWorkout.time} 
       onChange={handleChangeState}>
       </input>
       <button type="submit">Add Workout</button>
     </form>
+
+    </>
   );
 }
