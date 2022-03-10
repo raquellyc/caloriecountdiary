@@ -24,7 +24,7 @@ export default function WorkoutPage() {
 console.log(workouts)
   return (
     <>
-      <h1>WorkoutPage</h1>
+      <h1>Workout Diary</h1>
       <WorkoutForm  addWorkout={addWorkout} />
       <WorkoutList workouts={workouts}/>
     </>

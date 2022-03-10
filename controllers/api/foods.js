@@ -1,7 +1,13 @@
 const Foods = require('../../models/food');
 const request = require('request');
 module.exports = {
-    search
+    search,
+    addNewMeal
+}
+
+async function addNewMeal(req,res) {
+  const meal = await Foods.create(req.body)
+  res.json(meal);
 }
 
 async function search(req, res) {

@@ -1,35 +1,58 @@
 import { useState } from 'react';
+import SearchBar from '../SearchBar/SearchBar';
 
-export default function CalorieForm({ handleQuery }) {
+export default function CalorieForm({ addMeal, food, handleQuery }) {
 
-    const [inputValue, setInputValue] = useState('');
+  const [newMeal, setNewMeal] = useState({
+     date: "", 
+     meal: "breakfast", 
+     food:  "", 
+     calories: "" 
+  });
+    
+  function handleChange(evt) {
+      setNewMeal({...newMeal, food:food.name, calories:food.calories, [evt.target.name]: evt.target.value})
+  }
 
-    function handleChange(evt) {
-        setInputValue(evt.target.value)
+
+    function handleAddMeal(evt) {
+      evt.preventDefault();
+      addMeal(newMeal);
+      setNewMeal({
+        date: "", 
+        meal: "breakfast", 
+        food: "", 
+        calories: "" 
+      });
     }
-
-    function handleSubmit(evt) {
-        evt.preventDefault()
-        handleQuery(inputValue)
-    }
-
+console.log(newMeal)
   return (
     <div>
+      <SearchBar handleQuery={handleQuery} food={food} />
       <div className="food-diary">
-        <form onSubmit={handleSubmit} >
-          <label>Meal: </label>
-            <select>
-                <option>Breakfast</option>
-                <option>Lunch</option>
-                <option>Dinner</option>
-                <option>Snack</option>
-            </select>
-            <br/>
-        </form>
-          <label>Search Food: </label>
-          <input value={inputValue} type="text" name="search" onChange={evt => handleChange(evt)} ></input>
-          <button type="submit" >Search</button>
+        <form onSubmit={handleAddMeal} >
 
+          <label>food: </label>
+          <p>{food && food.name}</p>
+          <label>calories: </label>
+          <p>{food && food.calories}</p>
+          
+          <label>Date: </label>
+          <input
+            type= "Date" 
+            name="date" 
+            value={newMeal.date} 
+            onChange={handleChange}
+          />
+          <label>Meal: </label>
+            <select name="meal" onChange={handleChange} >
+                <option value='breakfast' >Breakfast</option>
+                <option value='lunch'>Lunch</option>
+                <option value='dinner'>Dinner</option>
+                <option value='snack' >Snack</option>
+            </select>
+          <button type="submit" >ADD MEAL</button>
+          </form>
       </div>
 
     </div>

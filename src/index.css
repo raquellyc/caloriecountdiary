@@ -4,7 +4,7 @@
   --tan-1: #8da586;
   --tan-2: #73916f;
   --tan-3: #567448;
-  --tan-4: #98b190;
+  --tan-4: #e2edf5;
   --orange: #f2c9eb;
   --text-light: #0e0d0d;
   --text-dark: #030303;
@@ -151,4 +151,21 @@ button:disabled, form:invalid button[type="submit"] {
 button[type="submit"] {
   grid-column: span 2;
   margin: 1vmin 0 0;
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(248, 243, 249);
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1.2em 2.8em;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(100, 97, 97);
 }

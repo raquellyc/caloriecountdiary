@@ -23,6 +23,7 @@ app.use(require('./config/checkToken'));
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/foods', require('./routes/api/foods'));
 app.use('/api/workouts', require('./routes/api/workouts'));
+app.use('/api/goals', require('./routes/api/goals'));
 
 // "Catch all" route
 app.get('/*', function(req, res) {

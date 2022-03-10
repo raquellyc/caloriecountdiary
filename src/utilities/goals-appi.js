@@ -1,13 +1,7 @@
 import { getToken } from "./users-service";
-const BASE_URL = '/api/foods';
+const BASE_URL = '/api/goals';
 
-export function searchFood(query) {
-    return sendRequest(`${BASE_URL}/foods`, 'POST', {query});
-}
 
-export function addNewMeal(meal) {
-  return sendRequest(`${BASE_URL}/foods/add`, 'POST', meal);
-}
 
 async function sendRequest(url, method = 'GET', payload = null) {
     // Fetch accepts an options object as the 2nd argument

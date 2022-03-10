@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <main className="App">
-      { user ?
+      { user ? 
           <>
             <NavBar user={user} setUser={setUser} />
             <Routes className="NavBar">

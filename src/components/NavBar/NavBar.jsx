@@ -10,15 +10,10 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav className="navbar">
       <Link to="/">Home</Link>
-      &nbsp; | &nbsp;
       <Link to="/diary/goal">Goals</Link>
-      &nbsp; | &nbsp;
       <Link to="/diary/calorie">Calorie Diary</Link>
-      &nbsp; | &nbsp;
       <Link to="/workouts">Workout Diary</Link>
-      &nbsp; | &nbsp;
       <Link to="/diary/progress">Your Progress</Link>
-      &nbsp; | &nbsp;
       <Link onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
