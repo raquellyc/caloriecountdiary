@@ -25,7 +25,7 @@ export default function App() {
               <Route path="/diary/progress" element={<ProgressPage />} />
               <Route path="/diary/goal" element={<GoalPage />} />
               <Route path="/diary/calorie" element={<CaloriePage />} />
-              <Route path="/diary/workout" element={<WorkoutPage />} />
+              <Route path="/workouts" element={<WorkoutPage />} />
             </Routes>
           </>
           :

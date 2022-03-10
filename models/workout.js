@@ -6,4 +6,4 @@ const workoutSchema = new Schema({
     duration: Number
 })
 
-module.exports = workoutSchema;
+module.exports = ('Workout', workoutSchema);

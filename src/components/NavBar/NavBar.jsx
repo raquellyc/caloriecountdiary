@@ -15,7 +15,7 @@ export default function NavBar({ user, setUser }) {
       &nbsp; | &nbsp;
       <Link to="/diary/calorie">Calorie Diary</Link>
       &nbsp; | &nbsp;
-      <Link to="/diary/workout">Workout Diary</Link>
+      <Link to="/workouts">Workout Diary</Link>
       &nbsp; | &nbsp;
       <Link to="/diary/progress">Your Progress</Link>
       &nbsp; | &nbsp;

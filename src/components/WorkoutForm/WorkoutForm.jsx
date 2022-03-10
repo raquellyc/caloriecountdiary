@@ -48,7 +48,7 @@ export default function WorkoutForm({ addWorkout }) {
         onChange={handleChangeState}
         placeholder="Time in minutes"
       />
-      <button type="submit" onClick={() => handleAddWorkout(newWorkout._id)}>Add Workout</button>
+      <button type="submit" >Add Workout</button>
     </form>
 
     </>
