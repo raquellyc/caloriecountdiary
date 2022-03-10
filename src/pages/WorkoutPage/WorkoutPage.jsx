@@ -4,18 +4,19 @@ import WorkoutList from '../../components/WorkoutList/WorkoutList';
 import * as workoutAPI from '../../utilities/workout-api';
 
 export default function WorkoutPage() {
-  const [workouts, setworkouts] = useState({ name: "", duration: "", time: "" });
+  const [workouts, setWorkouts] = useState([]);
 
+  
   async function addWorkout(workout) {
     const newWorkout = await workoutAPI.addNewWorkout(workout);
     console.log(newWorkout);
-    // setworkouts([...workouts, newWorkout]);
+    setWorkouts([...workouts, newWorkout]);
   }
 
-  useEffect( function(){
+  useEffect(function () {
     async function getAll() {
-      const workouts = await workoutAPI.getAllWorkouts();
-      setworkouts(workouts);
+      const allWorkouts = await workoutAPI.getAllWorkouts();
+      setWorkouts(allWorkouts);
     }
     getAll()
   }, [])

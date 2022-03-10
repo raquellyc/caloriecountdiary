@@ -3,10 +3,11 @@ const BASE_URL = '/api/workouts';
 
 export function getAllWorkouts() {
     return sendRequest(`${BASE_URL}/workouts`);
-  }
+}
 
 export function addNewWorkout(workout) {
-    return sendRequest(`${BASE_URL}/workouts`, 'POST', workout);
+    console.log(workout)
+    return sendRequest(`${BASE_URL}/workouts/add`, 'POST', workout);
 }
 
 async function sendRequest(url, method = 'GET', payload = null) {

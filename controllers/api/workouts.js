@@ -1,5 +1,5 @@
-const Workouts = require('../../models/workout');
-const request = require('request');
+const Workout = require('../../models/workout');
+
 
 module.exports = {
     getAll,
@@ -7,11 +7,13 @@ module.exports = {
 }
 
 async function getAll(req, res) {
-    const workouts = await Workouts.find();
-    res.json(workouts);
+    const workout = await Workout.find({})
+    console.log(workout);
+    res.json(workout);
 }
 
 async function addNewWorkout(req, res) {
-    const workout = await Workouts.create();
+    console.log(req.body);
+    const workout = await Workout.create(req.body);
     res.json(workout);
 }

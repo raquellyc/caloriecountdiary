@@ -18,7 +18,7 @@ export default function WorkoutForm({ addWorkout }) {
     setNewWorkout({
       name: "",
       duration: "",
-      time: ""
+      time: "00-00"
     });
   }
 

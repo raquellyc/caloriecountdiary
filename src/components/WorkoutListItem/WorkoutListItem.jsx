@@ -1,10 +1,11 @@
 
-export default function WorkoutListItem({ workout }){
+export default function WorkoutListItem({ item }){
     return(
         <ul className="WorkoutListItem">
-            <li>{workout.name} </li>
-            <li className="time"> Start-Time: {workout.time} </li>
-            <li className="duration"> duration: {workout.duration} </li>
+            <h1>workout item</h1>
+            <li>{item.name} </li>
+            <li className="time"> Start-Time: {item.time} </li>
+            <li className="duration"> duration: {item.duration} </li>
         </ul>   
    );
 }
