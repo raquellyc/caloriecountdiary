@@ -2,30 +2,34 @@ import { useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function CalorieForm({ addMeal, food, handleQuery }) {
+  const [newMealItem, setNewMealItem] = useState({
+    name: "",
+    calories: ""
+  });
+
   const [newMeal, setNewMeal] = useState({
      date: "", 
      meal: "breakfast", 
-     food:  "", 
-     calories: "" 
+     food:  []
   });
-    
+
+  /*-- Event Handlers --*/
   function handleChange(evt) {
       setNewMeal({...newMeal, food:food.name, calories:food.calories, [evt.target.name]: evt.target.value})
   }
 
 
-    function handleAddMeal(evt) {
-      evt.preventDefault();
-      addMeal(newMeal);
-      setNewMeal({
-        date: "", 
-        meal: "breakfast", 
-        food: "", 
-        calories: "" 
-      });
-    }
 
-console.log(newMeal)
+  function handleAddMeal(evt) {
+    evt.preventDefault();
+    addMeal(newMeal);
+    setNewMeal({
+      date: "", 
+      meal: "breakfast", 
+      food: [] 
+    });
+  }
+
   return (
     <div>
       <SearchBar handleQuery={handleQuery} food={food} />

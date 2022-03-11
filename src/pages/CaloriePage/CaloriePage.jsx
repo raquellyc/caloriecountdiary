@@ -41,7 +41,7 @@ console.log(food)
   return (
     <>
     <h1>My Food Diary</h1>
-    <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food}/>
+    <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food} />
     <MealList meals={meals}/>
     </>
 
