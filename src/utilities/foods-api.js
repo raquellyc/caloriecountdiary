@@ -9,6 +9,10 @@ export function addNewMeal(meal) {
   return sendRequest(`${BASE_URL}/foods/add`, 'POST', meal);
 }
 
+export function getAllMeals() {
+  return sendRequest(`${BASE_URL}/foods/meals`)
+}
+
 async function sendRequest(url, method = 'GET', payload = null) {
     // Fetch accepts an options object as the 2nd argument
     // used to include a data payload, set headers, etc. 

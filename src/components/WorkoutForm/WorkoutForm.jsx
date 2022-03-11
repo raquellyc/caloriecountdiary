@@ -2,7 +2,11 @@ import { useState } from "react";
 
 
 export default function WorkoutForm({ addWorkout }) {
-  const [newWorkout, setNewWorkout] = useState({ name: "", duration: "", time: "" });
+  const [newWorkout, setNewWorkout] = useState({ 
+    name: "", 
+    duration: "", 
+    time: "" 
+  });
 
   function handleChangeState(evt) {
     const updatedNewWorkout = {

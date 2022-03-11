@@ -1,7 +1,7 @@
 import * as foodAPI from '../../utilities/foods-api'
 import { useEffect, useState } from 'react';
 import CalorieForm from '../../components/CalorieForm/CalorieForm';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import MealList from '../../components/MealList/MealList';
 
 
 export default function CaloriePage() {
@@ -28,12 +28,21 @@ export default function CaloriePage() {
     setMeals([...meals, newMeal]);
   }
 
+  useEffect(function() {
+    async function getAll() {
+      const allMeals = await foodAPI.getAllMeals()
+      setMeals(allMeals);
+    }
+    getAll()
+  }, [])
+
 
 console.log(food)
   return (
     <>
     <h1>My Food Diary</h1>
     <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food}/>
+    <MealList meals={meals}/>
     </>
 
   );

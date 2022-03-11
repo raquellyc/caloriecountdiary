@@ -1,7 +1,7 @@
+import * as workoutAPI from '../../utilities/workout-api';
 import { useEffect, useState } from "react";
 import WorkoutForm from '../../components/WorkoutForm/WorkoutForm';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
-import * as workoutAPI from '../../utilities/workout-api';
 
 export default function WorkoutPage() {
   const [workouts, setWorkouts] = useState([]);

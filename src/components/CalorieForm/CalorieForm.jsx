@@ -2,7 +2,6 @@ import { useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
 
 export default function CalorieForm({ addMeal, food, handleQuery }) {
-
   const [newMeal, setNewMeal] = useState({
      date: "", 
      meal: "breakfast", 
@@ -25,6 +24,7 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
         calories: "" 
       });
     }
+    
 console.log(newMeal)
   return (
     <div>

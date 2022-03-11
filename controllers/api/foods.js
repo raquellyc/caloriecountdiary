@@ -1,8 +1,10 @@
 const Foods = require('../../models/food');
 const request = require('request');
+
 module.exports = {
     search,
-    addNewMeal
+    addNewMeal,
+    getAllMeals
 }
 
 async function addNewMeal(req,res) {
@@ -10,8 +12,12 @@ async function addNewMeal(req,res) {
   res.json(meal);
 }
 
+async function getAllMeals(res, req) {
+  const meal = await Foods.find({})
+  res.json(meal);
+}
+
 async function search(req, res) {
-    
     request.get({
       url: 'https://api.calorieninjas.com/v1/nutrition?query=' + req.body.query,
       headers: {
