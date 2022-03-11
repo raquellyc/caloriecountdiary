@@ -30,7 +30,7 @@ export default function CaloriePage() {
 
   useEffect(function() {
     async function getAll() {
-      const allMeals = await foodAPI.getAllMeals()
+      const allMeals = await foodAPI.getAllMeals();
       setMeals(allMeals);
     }
     getAll()

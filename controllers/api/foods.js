@@ -14,7 +14,8 @@ async function addNewMeal(req,res) {
 
 async function getAllMeals(res, req) {
   const meal = await Foods.find({})
-  res.json(meal);
+  console.log(meal)
+  req.json(meal);
 }
 
 async function search(req, res) {

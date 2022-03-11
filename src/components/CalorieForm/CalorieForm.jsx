@@ -24,7 +24,7 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
         calories: "" 
       });
     }
-    
+
 console.log(newMeal)
   return (
     <div>
@@ -32,9 +32,10 @@ console.log(newMeal)
       <div className="food-diary">
         <form onSubmit={handleAddMeal} >
 
-          <label>food: </label>
+          <label name="food" >food: </label>
           <p>{food && food.name}</p>
-          <label>calories: </label>
+
+          <label name="calories" >calories: </label>
           <p>{food && food.calories}</p>
           
           <label>Date: </label>

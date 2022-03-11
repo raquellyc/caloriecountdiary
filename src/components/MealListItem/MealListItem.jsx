@@ -1,10 +1,10 @@
-export default function CalorieList({ item }){
+export default function CalorieList({ item, food }){
     return(
         <ul className="MealListItem">
             <li>Date: {item.date} </li>
             <li>Meal: {item.meal} </li>
-            <li>Food: {item.food} </li>
-            <li>Calories: {item.calories} </li>
+            <li>Food: {food && food.name} </li>
+            <li>Calories: {food && food.calories} </li>
         </ul>   
    );
 }
