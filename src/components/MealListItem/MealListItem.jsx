@@ -3,8 +3,8 @@ export default function CalorieList({ item, food }){
         <ul className="MealListItem">
             <li>Date: {item.date} </li>
             <li>Meal: {item.meal} </li>
-            <li>Food: {food && food.name} </li>
-            <li>Calories: {food && food.calories} </li>
+            <li>Food: {item.food} </li>
+            <li>Calories: {item.calories} </li>
         </ul>   
    );
 }
