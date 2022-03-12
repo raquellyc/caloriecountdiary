@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 
-export default function SearchBar({ handleQuery, handleFood, food }){
+export default function SearchBar({ handleQuery }){
     const [inputValue, setInputValue] = useState('');
     
     function handleChange(evt) {
@@ -11,11 +11,9 @@ export default function SearchBar({ handleQuery, handleFood, food }){
     function handleSubmit(evt) {
         evt.preventDefault()
         handleQuery(inputValue)
-        handleFood(food)
+
     }
-
-    //add function to add multiply fooods to a meal
-
+    
   return(
     <form onSubmit={handleSubmit}>
         <label>Search Food: </label>
@@ -25,7 +23,7 @@ export default function SearchBar({ handleQuery, handleFood, food }){
             name="search" 
             onChange={evt => handleChange(evt)}
             />
-        <button type="submit" >ADD</button>
+        <button type="submit">ADD</button>
     </form>
     );  
 }

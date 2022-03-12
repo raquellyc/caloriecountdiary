@@ -1,7 +1,9 @@
 import { getToken } from "./users-service";
 const BASE_URL = '/api/goals';
 
-
+export function addWeight(weight) {
+  return sendRequest(`${BASE_URL}/weight/add`, 'POST', weight)
+}
 
 async function sendRequest(url, method = 'GET', payload = null) {
     // Fetch accepts an options object as the 2nd argument

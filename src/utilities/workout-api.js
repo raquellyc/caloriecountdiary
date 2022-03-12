@@ -6,7 +6,6 @@ export function getAllWorkouts() {
 }
 
 export function addNewWorkout(workout) {
-    console.log(workout)
     return sendRequest(`${BASE_URL}/workouts/add`, 'POST', workout);
 }
 

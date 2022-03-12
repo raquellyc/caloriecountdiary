@@ -10,7 +10,8 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
   const [newMeal, setNewMeal] = useState({
      date: "", 
      meal: "breakfast", 
-     food:  []
+     food:  [],
+     calories: []
   });
 
   /*-- Event Handlers --*/
@@ -18,16 +19,15 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
       setNewMeal({...newMeal, food:food.name, calories:food.calories, [evt.target.name]: evt.target.value})
   }
 
-
-
   function handleAddMeal(evt) {
     evt.preventDefault();
     addMeal(newMeal);
     setNewMeal({
       date: "", 
       meal: "breakfast", 
-      food: [] 
-    });
+      food: [],
+      calories: [] 
+    })
   }
 
   return (

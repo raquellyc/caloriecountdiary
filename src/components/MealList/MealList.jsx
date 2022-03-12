@@ -6,13 +6,10 @@ export default function MealList({ meals, handleAddMeal}) {
         <MealItem 
         key={item._id}
         handleAddMeal={handleAddMeal}
-        handle
         item={item} 
         />
         
     ));
-
-    console.log('meals')
 
     return <ul>{mealItems}</ul>
 }

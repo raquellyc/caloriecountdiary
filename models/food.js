@@ -10,6 +10,7 @@ const diarySchema = new Schema({
     date: Date,
     food: [],
     meal: { type: String, enum:['breakfast', 'lunch', 'dinner', 'snack']},
+    calories: []
 })
 
 
