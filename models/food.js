@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// const foodSchema = new Schema({
-//     food: String,
-//     calories: String
-// })
+const foodSchema = new Schema({
+    food: String,
+    calories: String
+})
 
 const diarySchema = new Schema({
     date: Date,

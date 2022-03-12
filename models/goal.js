@@ -6,8 +6,8 @@ const weightSchema = new Schema({
     weight: Number
 })
 
-const GoalSchema = new Schema({
-
+const goalSchema = new Schema({
+    weight: [weightSchema]
 })
 
 module.exports = mongoose.model('Goal', goalSchema);

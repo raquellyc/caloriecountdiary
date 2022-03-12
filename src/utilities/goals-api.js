@@ -1,8 +1,8 @@
 import { getToken } from "./users-service";
 const BASE_URL = '/api/goals';
 
-export function addWeight(weight) {
-  return sendRequest(`${BASE_URL}/weight/add`, 'POST', weight)
+export function addNewWeight(weight) {
+  return sendRequest(`${BASE_URL}/weight/add`, 'POST', weight);
 }
 
 async function sendRequest(url, method = 'GET', payload = null) {

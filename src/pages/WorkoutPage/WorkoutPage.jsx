@@ -6,7 +6,6 @@ import WorkoutList from '../../components/WorkoutList/WorkoutList';
 export default function WorkoutPage() {
   const [workouts, setWorkouts] = useState([]);
 
-  
   async function addWorkout(workout) {
     const newWorkout = await workoutAPI.addNewWorkout(workout);
     console.log(newWorkout);
