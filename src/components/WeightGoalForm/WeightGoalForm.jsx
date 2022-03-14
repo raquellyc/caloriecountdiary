@@ -9,7 +9,7 @@ export default function WeightGoalForm({ addWeight }) {
     function handleChangeState(evt) {
         const updateWeight = {
             ...newWeight,
-            [evt.target.weight]: evt.target.value 
+            [evt.target.date]: evt.target.value 
         };
         setNewWeight(updateWeight);
     }
@@ -25,6 +25,7 @@ export default function WeightGoalForm({ addWeight }) {
 
     return(
         <>
+        <h1>Weight Entry Form</h1>
             <form onSubmit={handleAddWeight}>
                 <label>Add Date: </label>
                 <input

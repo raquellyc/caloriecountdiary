@@ -1,10 +1,34 @@
-export default function WourkoutGoal() {
+import { useState } from 'react';
+
+export default function WourkoutGoalForm({ addFitnessGoal }) {
+    const [newFitnessGoal, setNewFitnessGoal] = useState({
+        workout: "",
+        minutes:""
+    });
+
+    /*-- Event Handlers --*/
+    function handleChangeState(evt) {
+        const updateFitnessGoal = {
+            ...newFitnessGoal,
+            [evt.target.workouts]: evt.target.value
+        };
+        setNewFitnessGoal(updateFitnessGoal);
+    }
+    function handleAddFitnessGoal(evt) {
+        evt.preventDeafault();
+        addFitnessGoal(newFitnessGoal);
+        setNewFitnessGoal({
+            workout: "",
+            minutes: ""
+        });
+    }
+
     return(
         <>
         <h1>Enter your fitness Goal!</h1>
-        <form>
-            <lable>Workouts per Week: </lable>
-                <select>
+        <form onSubmit={handleAddFitnessGoal}>
+            <label>Workouts per Week: </label>
+                <select onChange={handleChangeState}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -20,10 +44,13 @@ export default function WourkoutGoal() {
                     <option value="13">13</option>
                     <option value="14">14</option>
                 </select>
-            <lable>Minutes per Day: </lable>
+            <label>Minutes per Day: </label>
                 <input
                 type="Number"
+                onChange={handleChangeState}
+
                 />
+                <button type="submit">Add Goal!</button>
         </form>
         </>
     );

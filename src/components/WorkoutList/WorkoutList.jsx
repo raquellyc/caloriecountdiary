@@ -7,10 +7,7 @@ export default function WorkoutList({ workouts, handleAddWorkout }) {
         handleAddWorkout={handleAddWorkout}
         item={item} 
         />
-        
     ));
-
-    console.log('workouts')
 
     return <ul>{workoutItems}</ul>
 }
