@@ -1,27 +1,27 @@
 import * as goalAPI from '../../utilities/goals-api';
 import { useEffect, useState } from "react";
-import WeightGoalForm from '../../components/WeightGoalForm/WeightGoalForm';
+import WeightList from '../../components/WeightGoalForm/WeightGoalForm';
 
 export default function GoalPage() {
   const [weight, setWeight] = useState([]);
 
-  async function addWeight(weight) {
-    const newWeight = await goalAPI.addNewWeight(weight);
+  async function addWeight(weights) {
+    const newWeight = await goalAPI.addNewWeight(weights);
     setWeight([...weight, newWeight]);
   }
 
   useEffect(function() {
-    async function getAll() {
-      const allWeight = await goalAPI.getAllWeight();
+    async function allWeight() {
+      const allWeight = await goalAPI.getAllWeights();
       setWeight(allWeight);
     }
-    getAll()
+    allWeight()
   }, [])
 
   return (
     <>
-      <WeightGoalForm addWeight={addWeight} />
-      <WeightList weight={weight}/>
+      <h1>My Goals</h1>
+      <WeightList addWeight={addWeight} weight={weight}/>
     </>
   );
 }

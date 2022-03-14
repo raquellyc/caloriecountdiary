@@ -5,7 +5,6 @@ import AuthPage from '../AuthPage/AuthPage';
 import CaloriePage from '../CaloriePage/CaloriePage';
 import WorkoutPage from '../WorkoutPage/WorkoutPage';
 import HomePage from '../HomePage/HomePage';
-import ProgressPage from '../ProgressPage/ProgressPage';
 import GoalPage from '../GoalPage/GoalPage';
 import NavBar from '../../components/NavBar/NavBar';
 import { getUser } from '../../utilities/users-service';
@@ -22,7 +21,6 @@ export default function App() {
             <Routes className="NavBar">
               {/* Route components in here */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/diary/progress" element={<ProgressPage />} />
               <Route path="/diary/goal" element={<GoalPage />} />
               <Route path="/diary/calorie" element={<CaloriePage />} />
               <Route path="/workouts" element={<WorkoutPage />} />

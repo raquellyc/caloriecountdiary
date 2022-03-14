@@ -1,13 +1,16 @@
-export default function WeightList({ weight }) {
-    const 
+import WeightItem from "../WeightItem/WeightItem";
 
+export default function WeightList({ weight, handleAddWeight }) {
+   const weightItems = weight.map(item => (
+       <WeightItem
+       key={item._id}
+       handleAddWeight={handleAddWeight}
+       item={item}
+       
+       />
+   ));
+console.log(item)
     return(
-
-        <ul className="MealListItem">
-            <li><strong>{item.meal} </strong></li>
-            <li>Date: {item.date} </li>
-            <li>Food: {item.food} </li>
-            <li>Calories: {item.calories} </li>
-        </ul>   
+        <ul>{weightItems}</ul>
     );
 }

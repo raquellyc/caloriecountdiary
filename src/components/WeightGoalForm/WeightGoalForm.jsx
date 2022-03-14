@@ -1,37 +1,48 @@
 import { useState } from "react";
 
-export default function WeightGoalForm({ addNewWeight }) {
+export default function WeightGoalForm({ addWeight }) {
     const [newWeight, setNewWeight] = useState({
-        date: "",
-        weight: ""
+        date: "dd/MM/yyyy",
+        weight: "0"
     });
+
+    function handleChangeState(evt) {
+        const updateWeight = {
+            ...newWeight,
+            [evt.target.weight]: evt.target.value 
+        };
+        setNewWeight(updateWeight);
+    }
 
     function handleAddWeight(evt) {
         evt.preventDefault();
-        addNewWeight(newWeight);
+        addWeight(newWeight);
         setNewWeight({
-            date: "",
-            weight: ""
+            date: "dd/MM/yyyy",
+            weight: "0"
         });
     }
 
     return(
         <>
-        <div>
             <form onSubmit={handleAddWeight}>
-                <label>Add Weight: </label>
+                <label>Add Date: </label>
                 <input
                     type= "Date" 
                     name="date" 
+                    value={newWeight.date}
+                    onChange={handleChangeState}
                 />
+                <label>Add Weight: </label>
                 <input
                     type="Number"
                     name="weight"
+                    value={newWeight.weight}
                     placeholder="New Weight"
+                    onChange={handleChangeState}
                 />
-            <button type="submit">Add Workout</button>
+                <button type="submit">Add Weight</button>
             </form>
-        </div>
        </> 
     );
 }

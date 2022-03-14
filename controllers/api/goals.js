@@ -1,11 +1,19 @@
 const Goal = require('../../models/goal');
 
 module.exports = {
-    addNewWeight
+    addNewWeight,
+    allWeight
+}
+
+async function allWeight(req, res) {
+    const weight = await Goal.find({})
+    res.json(weight)
 }
 
 async function addNewWeight(res, req) {
     const weight = await Goal.create(req.body);
-    res.json(weight);
+    req.json(weight);
+    console.log(weight)
 }
+
 

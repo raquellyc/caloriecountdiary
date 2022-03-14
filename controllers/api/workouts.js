@@ -8,7 +8,6 @@ module.exports = {
 
 async function getAll(req, res) {
     const workout = await Workout.find({})
-    console.log(workout);
     res.json(workout);
 }
 
