@@ -1,4 +1,5 @@
 import * as workoutAPI from '../../utilities/workout-api';
+import * as fitnessGoalAPI from '../../utilities/fitnessGoals-api';
 import { useEffect, useState } from "react";
 import WorkoutForm from '../../components/WorkoutForm/WorkoutForm';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
@@ -13,14 +14,15 @@ export default function WorkoutPage() {
     const newWorkout = await workoutAPI.addNewWorkout(workout);
     setWorkouts([...workouts, newWorkout]);
   }
-   async function addFitnessGoal(fitness){
-     const newFitGoal = await workoutAPI.addMyFitness(fitness);
-     setFitnessGoal([...fitnessGoal, newFitGoal]);
-   }
 
-   useEffect(function () {
+  async function addFitnessGoal(fitness){
+    const newFitGoal = await fitnessGoalAPI.addMyFitness(fitness);
+    setFitnessGoal([...fitnessGoal, newFitGoal]);
+  }
+
+  useEffect(function () {
     async function getAllFitGoals() {
-      const allFitGoals = await workoutAPI.getAllFitGoals();
+      const allFitGoals = await fitnessGoalAPI.getAllFitGoals();
       setFitnessGoal(allFitGoals);
     }
     getAllFitGoals()

@@ -1,14 +1,13 @@
 import { getToken } from "./users-service";
-const BASE_URL = '/api/workouts';
+const BASE_URL = '/api/fitnessGoals';
 
-export function getAllWorkouts() {
-    return sendRequest(`${BASE_URL}/workouts`);
+export function getAllFitGoals(){
+  return sendRequest(`${BASE_URL}/fitGoal`);
 }
 
-export function addNewWorkout(workout) {
-    return sendRequest(`${BASE_URL}/workouts/add`, 'POST', workout);
+export function addMyFitness(fitness) {
+  return sendRequest(`${BASE_URL}/fitGoal/add`, 'POST', fitness);
 }
-
 
 async function sendRequest(url, method = 'GET', payload = null) {
     // Fetch accepts an options object as the 2nd argument

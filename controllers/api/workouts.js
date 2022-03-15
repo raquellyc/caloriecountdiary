@@ -1,22 +1,17 @@
 const Workout = require('../../models/workout');
-const Fit = require('../../models/fit');
+const Fit = require('../../models/fitnessGoals');
 
 
 module.exports = {
     getAll,
     addNewWorkout,
-    addNewFitGoal,
-    getAllFitGoal
 }
 
 async function getAll(req, res) {
+    console.log("hiii")
     const workout = await Workout.find({})
+    console.log(workout)
     res.json(workout);
-}
-
-async function getAllFitGoal(req, res) {
-    const fitGoal = await Fit.find({})
-    res.json(fitGoal);
 }
 
 async function addNewWorkout(req, res) {
@@ -25,7 +20,3 @@ async function addNewWorkout(req, res) {
     res.json(workout);
 }
 
-async function addNewFitGoal(req, res) {
-    const fitGoal = await Fit.create(req.body);
-    res.json(fitGoal);
-}

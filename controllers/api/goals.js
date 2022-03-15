@@ -5,15 +5,15 @@ module.exports = {
     allWeight
 }
 
-async function allWeight(req, res) {
-    const weight = await Goal.find({})
-    res.json(weight)
+async function addNewWeight(res, req) {
+    const weight = await Goal.create(res.body);
+    req.json(weight);
 }
 
-async function addNewWeight(res, req) {
-    const weight = await Goal.create(req.body);
-    req.json(weight);
-    console.log(weight)
+async function allWeight(res, req) {
+    const weight = await Goal.find({})
+    req.json(weight)
 }
+
 
 

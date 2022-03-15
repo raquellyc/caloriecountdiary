@@ -1,17 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const weightSchema = new Schema({
-    date: Date,
-    weight: Number
-})
-
-const goalWeightSchema = new Schema ({
-    
-})
-
 const goalSchema = new Schema({
-    Currweight: [weightSchema]
+    date: Date,
+    weight: {type: Number, required:true, default: 0 }
 })
 
 module.exports = mongoose.model('Goal', goalSchema);

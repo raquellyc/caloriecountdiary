@@ -16,7 +16,11 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
 
   /*-- Event Handlers --*/
   function handleChange(evt) {
-      setNewMeal({...newMeal, food:food.name, calories:food.calories, [evt.target.name]: evt.target.value})
+    setNewMeal({...newMeal, 
+      food:food.name, 
+      calories:food.calories, 
+      [evt.target.name]: evt.target.value
+    });
   }
 
   function handleAddMeal(evt) {

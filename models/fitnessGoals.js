@@ -5,13 +5,9 @@ const FitnessGoalSchema = new Schema({
     workout: {
         type: Number, 
         min: 1,
-        max: 14,
-        default: 3
+        max: 14
     },
-    minutes:{
-        type: Number,
-        min:1
-    }
+    minutes:{type: Number, required:true, default: 0 }
 })
 
 module.exports = mongoose.model('Fit', FitnessGoalSchema);
