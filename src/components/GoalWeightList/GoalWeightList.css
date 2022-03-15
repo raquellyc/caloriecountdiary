@@ -1,7 +1,14 @@
 .GoalWeightList {
     display: flex;
     flex-direction: column;
-    background-color: lightblue;
+    background-color: var(--WD-1);
+    color: var(--WD-2);
     padding: 3vmin;
-    overflow-y: scroll;
+    border-radius: 10vmin;
+
+}
+
+li {
+    list-style-type: none;
+    color: white;
 }

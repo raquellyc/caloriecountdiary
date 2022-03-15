@@ -2,9 +2,9 @@ import * as foodAPI from '../../utilities/foods-api'
 import { useEffect, useState } from 'react';
 import CalorieForm from '../../components/CalorieForm/CalorieForm';
 import MealList from '../../components/MealList/MealList';
+import './CaloriePage.css';
 
-
-export default function CaloriePage() {
+export default function CaloriePage({ user, setUser }) {
   const [food, setFood] = useState();
   const [meals, setMeals] = useState([]);
   const [query, setQuery] = useState('');

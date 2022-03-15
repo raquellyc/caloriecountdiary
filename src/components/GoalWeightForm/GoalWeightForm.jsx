@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './GoalWeightForm.css';
 
 export default function WeightGoalForm({ addWeight }) {
     const [newWeight, setNewWeight] = useState({

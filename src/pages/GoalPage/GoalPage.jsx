@@ -2,6 +2,7 @@ import * as goalAPI from '../../utilities/goals-api';
 import { useEffect, useState } from "react";
 import GoalWeightList from '../../components/GoalWeightList/GoalWeightList';
 import GoalWeightForm from '../../components/GoalWeightForm/GoalWeightForm';
+import './GoalPage.css';
 
 export default function GoalPage() {
   const [weights, setWeights] = useState([]);
@@ -21,9 +22,10 @@ export default function GoalPage() {
 
   return (
     <>
-      <h1>My Goals</h1>
+    <main className='Weightinfo'>
       <GoalWeightForm addWeight={addWeight}/>
       <GoalWeightList weights={weights}/>
+    </main>
     </>
   );
 }

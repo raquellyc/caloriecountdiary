@@ -1,7 +1,14 @@
 /* CSS Custom Properties */
 :root {
-  --text-light: #addab3;
-  --text-dark: #3b5819;
+  --background: #fef6eb;
+  --text: #036b62;
+  --WD-1: #adcec3;
+  --WD-2: #468c84;
+  --CD-1: #ffd6b0;
+  --CD-2: #ea9640;
+  --WK-1: #ffc6bb;
+  --WK-2: #f57572;
+
 }
 
 *, *:before, *:after {
@@ -15,7 +22,8 @@ body {
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(white-back);
+  background-color: var(--background);
+  color: var(--text);
   padding: 2vmin;
   height: 100vh;
 }
@@ -64,7 +72,6 @@ code {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: var(--text-dark);
   border: .1vmin solid;
   border-radius: 1vmin;
   padding: .6vmin;
@@ -84,7 +91,6 @@ input {
   font-size: 2vmin;
   border: .1vmin solid;
   border-radius: .5vmin;
-  color: var(--text-dark);
   background-image: none !important; /* prevent lastpass */
   outline: none;
 }
@@ -96,7 +102,6 @@ input:focus {
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
-  background-color: var(--orange);
   font-size: 2vmin;
   font-weight: bold;
   text-decoration: none;
@@ -139,5 +144,5 @@ nav.navbar {
 
 a {
   text-decoration: none;
-  color: rgb(100, 97, 97);
+  color: var(--text);
 }

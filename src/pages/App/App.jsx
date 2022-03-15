@@ -24,10 +24,18 @@ export default function App() {
               <Route path="/diary/goal" element={<GoalPage />} />
               <Route path="/diary/calorie" element={<CaloriePage />} />
               <Route path="/workouts" element={<WorkoutPage />} />
+              <Route path="/login" element={<WorkoutPage />} />
+
             </Routes>
           </>
           :
-          <AuthPage setUser={setUser} />
+          <>
+            <NavBar user={user} setUser={setUser} />
+            <Routes className="NavBar">
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<AuthPage setUser={setUser}/>}  />
+            </Routes>
+          </>
       }
     </main>
   );

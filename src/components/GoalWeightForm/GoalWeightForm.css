@@ -1,0 +1,9 @@
+button {
+    background-color: var(--WD-2);
+    color: white; 
+}
+
+input{
+    border: grey;
+    color: grey
+}
