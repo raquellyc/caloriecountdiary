@@ -36,8 +36,6 @@ export default function CaloriePage() {
     getAll()
   }, [])
 
-
-console.log(food)
   return (
     <>
     <h1>My Food Diary</h1>

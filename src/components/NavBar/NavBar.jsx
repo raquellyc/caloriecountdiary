@@ -10,7 +10,7 @@ export default function NavBar({ user, setUser }) {
   return (
     <nav className="navbar">
       <Link to="/">Home</Link>
-      <Link to="/diary/goal">Goals</Link>
+      <Link to="/diary/goal">Weight Diary</Link>
       <Link to="/diary/calorie">Calorie Diary</Link>
       <Link to="/workouts">Workout Diary</Link>
       <Link onClick={handleLogOut} to="">Log Out</Link>

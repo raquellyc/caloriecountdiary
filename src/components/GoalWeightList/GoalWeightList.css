@@ -1,0 +1,7 @@
+.GoalWeightList {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    padding: 3vmin;
+    overflow-y: scroll;
+}
