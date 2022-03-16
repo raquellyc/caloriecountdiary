@@ -21,10 +21,10 @@ export default function App() {
             <Routes className="NavBar">
               {/* Route components in here */}
               <Route path="/" element={<HomePage />} />
-              <Route path="/diary/goal" element={<GoalPage />} />
-              <Route path="/diary/calorie" element={<CaloriePage />} />
-              <Route path="/workouts" element={<WorkoutPage />} />
-              <Route path="/login" element={<WorkoutPage />} />
+              <Route path="/diary/goal" element={<GoalPage user={user} setUser={setUser}/>} />
+              <Route path="/diary/calorie" element={<CaloriePage user={user} setUser={setUser}/>} />
+              <Route path="/workouts" element={<WorkoutPage user={user} setUser={setUser}/>} />
+              <Route path="/login" element={<WorkoutPage user={user} setUser={setUser} />} />
 
             </Routes>
           </>

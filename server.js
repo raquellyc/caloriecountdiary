@@ -21,10 +21,11 @@ app.use(require('./config/checkToken'));
 
 // API routes here
 app.use('/api/users', require('./routes/api/users'));
-app.use('/api/foods', require('./routes/api/foods'));
-app.use('/api/workouts', require('./routes/api/workouts'));
-app.use('/api/fitnessGoals', require('./routes/api/fitnessGoals'));
-app.use('/api/goals', require('./routes/api/goals'));
+const ensureLoggedIn = require('./config/ensureLoggedIn');
+app.use('/api/foods', ensureLoggedIn, require('./routes/api/foods'));
+app.use('/api/workouts', ensureLoggedIn, require('./routes/api/workouts'));
+app.use('/api/fitnessGoals', ensureLoggedIn, require('./routes/api/fitnessGoals'));
+app.use('/api/goals', ensureLoggedIn, require('./routes/api/goals'));
 
 // "Catch all" route
 app.get('/*', function(req, res) {

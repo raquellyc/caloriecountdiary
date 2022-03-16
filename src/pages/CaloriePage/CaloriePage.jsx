@@ -2,6 +2,7 @@ import * as foodAPI from '../../utilities/foods-api'
 import { useEffect, useState } from 'react';
 import CalorieForm from '../../components/CalorieForm/CalorieForm';
 import MealList from '../../components/MealList/MealList';
+import UserLogOut from '../../components/UserLogOut/UserLogOut';
 import './CaloriePage.css';
 
 export default function CaloriePage({ user, setUser }) {
