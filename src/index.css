@@ -79,11 +79,23 @@ code {
   font-size: 2vmin;
 }
 
+.form-container {
+  padding: 3vmin;
+  border: .1vmin solid;
+  border-radius: 1vmin;
+}
+
 form {
-  padding: 5vh;
   display: grid;
+  padding: 5vh;
   grid-template-columns: 1fr;
   gap: 1.25vmin;
+}
+
+label {
+  font-size: 2vmin;
+  display: flex;
+  align-items: center;
 }
 
 input {

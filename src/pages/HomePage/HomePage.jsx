@@ -1,5 +1,9 @@
+import "./HomePage.css"
+
 export default function HomePage() {
     return (
-      <h1>HomePage</h1>
+      <>
+      <img className="logoimg" src="Images/caloriecompadre_background2.svg"></img>
+      </>
     );
   }
