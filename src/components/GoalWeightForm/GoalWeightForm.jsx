@@ -41,7 +41,7 @@ export default function WeightGoalForm({ addWeight }) {
                     placeholder="New Weight"
                     onChange={handleChange}
                 />
-                <button type="submit">Add Weight</button>
+                <button className="addWeight" type="submit">Add Weight</button>
             </form>
        </div> 
     );

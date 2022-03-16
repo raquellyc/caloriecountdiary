@@ -13,7 +13,7 @@ export default function GoalWeightList({ weights, addWeight }) {
     return (
     <main className="GoalWeightList">
         <h1>Weight Enteries</h1>
-        {goalWeightItems}
+        <li className="weightItems" >{goalWeightItems}</li>
     </main>
     );
 }

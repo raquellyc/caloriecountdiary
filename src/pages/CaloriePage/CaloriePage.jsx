@@ -37,11 +37,13 @@ export default function CaloriePage({ user, setUser }) {
   }, [])
 
   return (
-    <>
-    <h1>My Food Diary</h1>
+   <>
+    <h1 className='CalorieTitle'>My Calorie Diary</h1>
+    <main className='Calorieinfo'>
     <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food} />
     <MealList meals={meals}/>
-    </>
+    </main>
+    </> 
 
   );
 }

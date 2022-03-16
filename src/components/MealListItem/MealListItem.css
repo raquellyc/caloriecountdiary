@@ -1,0 +1,8 @@
+ul.MealListItems {
+    list-style-type: none;
+    background-color: var(--CD-1);
+    border: none;
+    border-radius: 3vmin;
+    margin: 2vmin;
+    padding: 2vmin;
+}

@@ -1,0 +1,11 @@
+main.Calorieinfo{
+    padding: 5vmin;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+
+}
+
+h1.CalorieTitle {
+    margin-left: 9vmin;
+}

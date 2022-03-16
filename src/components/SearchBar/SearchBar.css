@@ -1,0 +1,11 @@
+button.AddSearch {
+    background-color: var(--CD-1);
+    color: white;
+}
+
+form.SearchForm {
+    background-color: var(--CD-2);
+    border: white;
+    border-radius: 3vmin;
+    margin: 4vmin;
+}

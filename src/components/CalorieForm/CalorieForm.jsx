@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import SearchBar from '../SearchBar/SearchBar';
+import './CalorieForm.css';
 
 export default function CalorieForm({ addMeal, food, handleQuery }) {
   const [newMealItem, setNewMealItem] = useState({
@@ -38,7 +39,7 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
     <div>
       <SearchBar handleQuery={handleQuery} food={food} />
       <div className="food-diary">
-        <form onSubmit={handleAddMeal} >
+        <form className="food-diary" onSubmit={handleAddMeal} >
 
           <label name="food" >food: </label>
           <p>{food && food.name}</p>
@@ -60,7 +61,7 @@ export default function CalorieForm({ addMeal, food, handleQuery }) {
                 <option value='dinner'>Dinner</option>
                 <option value='snack' >Snack</option>
             </select>
-          <button type="submit" >ADD MEAL</button>
+          <button className="foodDiaryButton" type="submit" >ADD MEAL</button>
           </form>
       </div>
 

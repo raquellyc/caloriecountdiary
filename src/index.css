@@ -95,10 +95,6 @@ input {
   outline: none;
 }
 
-input:focus {
-  border-color: var(--orange);
-}
-
 button, a.button {
   margin: 1vmin;
   padding: 1vmin;
