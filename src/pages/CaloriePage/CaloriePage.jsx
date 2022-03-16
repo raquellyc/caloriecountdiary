@@ -40,8 +40,8 @@ export default function CaloriePage({ user, setUser }) {
    <>
     <h1 className='CalorieTitle'>My Calorie Diary</h1>
     <main className='Calorieinfo'>
-    <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food} />
     <MealList meals={meals}/>
+    <CalorieForm handleQuery={handleQuery} addMeal={addMeal} food={food} />
     </main>
     </> 
 

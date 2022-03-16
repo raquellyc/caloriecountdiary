@@ -24,7 +24,6 @@ export default function WeightGoalForm({ addWeight }) {
 
     return(
         <div>
-        <h1>Weight Entry Form</h1>
             <form onSubmit={handleAddWeight}>
             <label>Date: </label>
                 <input

@@ -22,6 +22,7 @@ export default function GoalPage() {
 
   return (
     <>
+    <h1 className='WeightTitle'>Weight Diary</h1>
     <main className='Weightinfo'>
       <GoalWeightForm addWeight={addWeight}/>
       <GoalWeightList weights={weights}/>

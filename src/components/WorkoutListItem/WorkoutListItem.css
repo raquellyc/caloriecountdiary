@@ -1,0 +1,10 @@
+.WorkoutListItem {
+    list-style-type: none;
+    background-color: var(--WK-2);
+    color: white;
+    border: none;
+    border-radius: 3vmin;
+    margin: 2vmin;
+    margin-right: 7vmin;
+    padding: 2vmin;
+}

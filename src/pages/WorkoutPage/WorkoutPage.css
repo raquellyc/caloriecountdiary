@@ -1,12 +1,13 @@
-main.Weightinfo{
+main.WorkoutDiary{
     padding: 5vmin;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-evenly;
-    margin-top: 5vmin;
+}
+div.fitGoal {
+    margin: 5vmin;
 }
 
-h1.WeightTitle {
-    margin-top: 5vmin;
+h1.WorkoutTitle {
     margin-left: 10vmin;
 }

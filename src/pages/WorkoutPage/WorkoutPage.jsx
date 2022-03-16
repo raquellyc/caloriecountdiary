@@ -5,6 +5,7 @@ import WorkoutForm from '../../components/WorkoutForm/WorkoutForm';
 import WorkoutList from '../../components/WorkoutList/WorkoutList';
 import WorkoutGoalList from '../../components/WorkoutGoalList/WorkoutGoalList';
 import WorkoutGoalForm from '../../components/WorkoutGoalForm/WorkoutGoalForm';
+import './WorkoutPage.css'
 
 export default function WorkoutPage() {
   const [workouts, setWorkouts] = useState([]);
@@ -38,11 +39,17 @@ export default function WorkoutPage() {
   
   return (
     <>
-      <h1>Workout Diary</h1>
-      <WorkoutForm  addWorkout={addWorkout} />
-      <WorkoutList workouts={workouts}/>
-      <WorkoutGoalForm addFitnessGoal={addFitnessGoal}/>
-      <WorkoutGoalList fitnessGoal={fitnessGoal}/>
+    <h1 className='WorkoutTitle'>My Workout Diary</h1>
+      <main className='WorkoutDiary'>
+        <div className='fitGoal'>
+          <WorkoutGoalList fitnessGoal={fitnessGoal}/>
+          <WorkoutGoalForm addFitnessGoal={addFitnessGoal}/>
+        </div>
+        <div className='workoutGoal'>
+          <WorkoutForm  addWorkout={addWorkout} />
+          <WorkoutList workouts={workouts}/>
+        </div>
+      </main>
     </>
   );
 }

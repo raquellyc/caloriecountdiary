@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './WorkoutGoalForm.css'
 
 export default function WourkoutGoalForm({ addFitnessGoal }) {
     const [newFitnessGoal, setNewFitnessGoal] = useState({
@@ -27,8 +28,7 @@ export default function WourkoutGoalForm({ addFitnessGoal }) {
 
     return(
         <>
-        <h1>Enter your fitness Goal!</h1>
-        <form onSubmit={handleAddFitnessGoal}>
+        <form className="NewFitGoalForm" onSubmit={handleAddFitnessGoal}>
             <label>Workouts per Week: </label>
                 <select name="workout" value={newFitnessGoal.workout} onChange={handleChangeState}>
                     <option value="1">1</option>
@@ -52,7 +52,7 @@ export default function WourkoutGoalForm({ addFitnessGoal }) {
                 type="Number"
                 onChange={handleChangeState}
                 />
-                <button type="submit">Add Goal!</button>
+                <button className="addGoal" type="submit">Add Goal!</button>
         </form>
         </>
     );

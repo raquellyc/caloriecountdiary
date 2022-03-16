@@ -1,0 +1,9 @@
+.WorkoutGoalItem{
+    list-style-type: none;
+    background-color: var(--WK-1);
+    border: none;
+    border-radius: 50vmin;
+    margin: 2vmin;
+    margin-right: 7vmin;
+    padding: 2vmin;
+}

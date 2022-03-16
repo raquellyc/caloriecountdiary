@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './WorkoutForm.css';
 
 export default function WorkoutForm({ addWorkout }) {
   const [newWorkout, setNewWorkout] = useState({ 
@@ -52,7 +52,7 @@ export default function WorkoutForm({ addWorkout }) {
         onChange={handleChangeState}
         placeholder="Time in minutes"
       />
-      <button type="submit" >Add Workout</button>
+      <button className="addWorkout" type="submit" >Add Workout</button>
     </form>
 
     </>

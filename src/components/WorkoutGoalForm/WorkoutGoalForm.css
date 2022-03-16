@@ -1,0 +1,10 @@
+button.addGoal {
+    background-color: var(--WK-1);
+    color: white; 
+}
+
+form.NewFitGoalForm {
+    border: solid 1vmin white;
+    border-radius: 2vmin;
+    margin-top: 15vmin;
+}

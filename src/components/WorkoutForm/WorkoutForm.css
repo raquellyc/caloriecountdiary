@@ -1,0 +1,10 @@
+button.addWorkout {
+    background-color: var(--WK-1);
+    color: white; 
+}
+
+form.NewWorkoutForm {
+    border: solid 1vmin;
+    border-color: var(--WK-2);
+    border-radius: 2vmin;
+}
